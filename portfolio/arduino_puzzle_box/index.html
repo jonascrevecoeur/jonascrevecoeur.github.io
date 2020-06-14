@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Arduino puzzle box</title>
+<meta name="description" content="Describe your website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<link rel="stylesheet" href="/css/owl.theme.css">
+
+
+  <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="/">Jonas Crevecoeur</a></h1>
+    
+      <p class="sidebar-p">Data-lover and programming enthousiast. Always interested in a new challenge integrating data science in daily life.<br><br>This page highlights some of the projects I have worked on.</p>
+    
+    <ul class="sidebar-menu">
+      
+        <li><a href="/portfolio/">Home</a></li>
+      
+        <li><a href="/cv.pdf">Resume</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:jonas.crevecoeur@hotmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/jonascrevecoeur/" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+  <a href="https://github.com/jonascrevecoeur" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2019 Jonas Crevecoeur |
+        
+        Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="/">Jonas Crevecoeur</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>Arduino puzzle box</h1>
+         
+
+
+<p>In 2018, I received my first Arduino, i.e. a small programmable electronics board (see image below).</p>
+<br>
+<center>
+<img src="../images/arduinio_uno.png" alt="drawing" width="400px"/>
+</center>
+<p><br></p>
+<p>By connecting hardware components and programming the Arduino CPU a wide range of devices can be build.</p>
+<div id="controlling-a-led" class="section level3">
+<h3>Controlling a led</h3>
+<p>As a simple example, in the setup below a led light can be turned on or off by pressing a button.</p>
+<br>
+<center>
+<img src="../images/arduino_circuit_button.png" alt="drawing" width="400x"/>
+</center>
+<p><br></p>
+<p>Circuit 1 detects when the button is pressed by measuring the current in Arduino’s second input pin. The signal measured in pin 2 is further refined to detect individual clicks. With each click the voltage output of pin 3 alternates between 0V (led is off) and 5V (led is on). The following script programs this behaviour in Arduino.</p>
+<pre class="c"><code>const int button_pin = 2;
+const int led_pin = 3;
+
+bool button_active = false;
+bool led_active = false;
+
+void setup() { // runs on startup
+  pinMode(button_pin, INPUT);
+  pinMode(led_pin, OUTPUT);
+}
+
+bool button_press() {
+  int button_status = digitalRead(button_pin);
+
+  if(button_status == HIGH) { // button is down
+    if(button_active) {
+      return(false); // We have already registered this click
+    }
+    button_active = true;
+    return(true);
+  } else {
+    // The button is no longer pressed,
+    // ready to register the next click
+    button_active = false; 
+    return(false);
+  }
+}
+
+void loop() { 
+  delay(5); // Run every 5 milliseconds
+
+  if(button_press()) {
+    led_active = !led_active; // switch led active
+    if(led_active){
+      digitalWrite(led_pin, HIGH); // led is on
+    } else {
+      digitalWrite(led_pin, LOW); // led is off
+    }
+  }
+
+}</code></pre>
+</div>
+<div id="arduino-puzzle-box" class="section level3">
+<h3>Arduino puzzle box</h3>
+<p>As a huge fan of puzzles and riddles, I designed a hand crafted and Arduino controlled puzzle box (image below). The box combines a wide range of sensors and can only be opened after solving seven original puzzles.</p>
+<br>
+<center>
+<img src="../images/puzzle_box.png" alt="drawing" width="400px"/>
+</center>
+<p><br></p>
+<p>Most of the puzzles combine logical deduction with a unique input method. For example, as part of a puzzle, the box sends a signal in Morse code. This puzzle is solved when the participant uses a flashlight to signal the correct answer in Morse back to the box.</p>
+</div>
+<div id="detecting-morse-signals" class="section level3">
+<h3>Detecting Morse signals</h3>
+<p>The puzzle box contains a photoresistor, which has a lower resistance when it is lighter. By measuring the amount of current passing through this resistor, we can measure the amount of light.</p>
+<p>Sensor data is always noisy and therefore interpreting the raw signal requires careful planning. The image below shows the steps for converting the raw output from the photoresistor into an interpretable value.</p>
+<br>
+<center>
+<img src="../images/light signal.png" alt="drawing" width="600px"/>
+</center>
+<p><br></p>
+<p>We carefully calibrate two threshold for the light intensity. When the intensity exceeds the upper threshold, the flashlight is on, and when intensity drops below the lower threshold, the flashlight is off. In between both thresholds the flashlight can be either on or off depending on the last recorded situation. The difference between both thresholds prevents status changes resulting from noisy sensor output. The resulting on/off pattern is carefully timed and further processed into an interpretable value.</p>
+</div>
+<div id="future-projects" class="section level3">
+<h3>Future projects</h3>
+<p>Currently, I’m working on a second version of the puzzle box with a few modifications in puzzle design and lasercutted surfaces for a better puzzle experience. I have also started designing a second puzzle box.</p>
+<br>
+<center>
+<img src="../images/puzzle_box2.png" alt="drawing" width="400px"/>
+</center>
+<p><br></p>
+</div>
+
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.cookie.js"> </script>
+<script src="/js/ekko-lightbox.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/front.js"></script>
+
+
+
+</body>
+</html>

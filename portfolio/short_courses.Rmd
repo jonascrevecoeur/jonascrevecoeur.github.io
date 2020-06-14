@@ -1,0 +1,40 @@
+---
+title: "In company courses"
+author: "Jonas Crevecoeur"
+date: '2020-04-31'
+draft: no
+image: portfolio/images/company_courses.jpg
+showonlyimage: no
+description: Co teaching two short courses in R
+type: post
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+During my PhD I had the opportunity to co teach two in company short courses: [Programming in R](https://github.com/jonascrevecoeur/workshop-R) (together with Katrien Antonio) and [hands-on machine learning](https://github.com/jonascrevecoeur/workshop-ML) (together with Katrien Antonio and Roel Henckaerts). 
+
+### [Programming in R](https://github.com/jonascrevecoeur/workshop-R)
+
+I taught the second day entitled "Advanced R programming" of this two day course to a small audience (+/- 10 professionals) with various expertise in R. We constructed an interactive session with participants programming in R after every 10 to 15 minutes of theory. <br><br> 
+This are the slides for this session. Scroll through the slides by first clicking on them and then using the arrow keys.
+
+<iframe id='slides1' src="../slides/advanced_R_workshop_NN.html" width = '800px' height = '450px' style='overflow:hidden;'  scrolling="no"></iframe>
+
+<br>
+
+
+### [Hands-on machine learning](https://github.com/jonascrevecoeur/workshop-ML)
+
+I taught the third day on neural networks within this three day course. Like the R programming course, we created an interactive session with many R challenges, such that by the end of the day participants had the skills to design neural networks for other problems. This course was aimed at practitioners implementing these models as well as managers interested in new analytical tools for their businesses.
+<br><br> 
+This are the slides for this session. Scroll through the slides by first clicking on them and then using the arrow keys.
+
+<iframe src="../slides/lecture_sheets_workshop_ML_Day_3.html" width = '800px' height = '450px'></iframe>
+
+
+
+
+
+

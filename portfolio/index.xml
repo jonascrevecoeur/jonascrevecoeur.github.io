@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Jonas Crevecoeur</title>
+    <link>/portfolio/</link>
+    <description>Recent content in Portfolios on Jonas Crevecoeur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PhD, Insurance claim development</title>
+      <link>/portfolio/insurance_claim_development/</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/insurance_claim_development/</guid>
+      <description>SettingInsurance is a unique industry in which the production cycle is inverted, i.e. income precedes costs. Policyholders pay a premium to the insurer, who in return guarantees to reimburse future losses resulting from insured accidents.
+As a result of the inverted production cycle, insurers set aside funds, the so-called reserve, to cover claims that have already occurred, but are not yet (fully) reimbursed. For insurance to function properly, it is essential that policyholders trust that these reserves are adequate for covering all future costs.</description>
+    </item>
+    
+    <item>
+      <title>Arduino puzzle box</title>
+      <link>/portfolio/arduino_puzzle_box/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/arduino_puzzle_box/</guid>
+      <description>In 2018, I received my first Arduino, i.e. a small programmable electronics board (see image below).
+
+By connecting hardware components and programming the Arduino CPU a wide range of devices can be build.
+Controlling a ledAs a simple example, in the setup below a led light can be turned on or off by pressing a button.
+
+Circuit 1 detects when the button is pressed by measuring the current in Arduino’s second input pin.</description>
+    </item>
+    
+    <item>
+      <title>Datathon 2020</title>
+      <link>/portfolio/datathon2020/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/datathon2020/</guid>
+      <description>Together with 4 other PhDs at the faculty of economics, I participated in the 2020 edition of the KU Leuven Datathon competition.
+SettingThis edition of the Datathon collaborated with citizen science projects of the city of Leuven. All participants received sensor data at 5 minute intervals from 76 weather stations spread around Leuven. There was no predefined task, giving each groups the freedom to come up with their own application of the data.</description>
+    </item>
+    
+    <item>
+      <title>Shadowing</title>
+      <link>/portfolio/shadowing/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/shadowing/</guid>
+      <description>When learning 日本語 (Japanese), I became interested in a language learning technique called shadowing. In shadowing, you listen and simultaneously repeat texts spoken by native speakers. This technique trains listening comprehension and allows you to adopt common speak patterns and phrases.
+However, at the time I was learning Japanese there was no good app available for shadowing. So I created a simple android app for self use. The app consists of two screen (activities) shown below.</description>
+    </item>
+    
+    <item>
+      <title>Student job, website development</title>
+      <link>/portfolio/vakantiewerk/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/vakantiewerk/</guid>
+      <description>Summer 2012 and 2013, I developed, as a student job, two websites for LIKONA (Limburge Koepel voor Natuurstudie).
+Student job 2012: Atlas biodiversiteitThis website combines a number of local databases with observations of flora and fauna in Limburg. Via a hierarchical selection menu (order, family, species) the user can view the observations from a specific species on the map of Limburg. Registered users of LIKONA, can further refine these results by selecting specific observation periods.</description>
+    </item>
+    
+    <item>
+      <title>In company courses</title>
+      <link>/portfolio/short_courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/short_courses/</guid>
+      <description>During my PhD I had the opportunity to co teach two in company short courses: Programming in R (together with Katrien Antonio) and hands-on machine learning (together with Katrien Antonio and Roel Henckaerts).
+Programming in RI taught the second day entitled “Advanced R programming” of this two day course to a small audience (+/- 10 professionals) with various expertise in R. We constructed an interactive session with participants programming in R after every 10 to 15 minutes of theory.</description>
+    </item>
+    
+  </channel>
+</rss>

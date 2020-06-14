@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on Jonas Crevecoeur</title>
+    <link>/slides/</link>
+    <description>Recent content in Slides on Jonas Crevecoeur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/slides/libs/leaflet-providers-1.1.17/rstudio_install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/libs/leaflet-providers-1.1.17/rstudio_install/</guid>
+      <description>Location   from: github.com/schloerke/leaflet-providers@urlProtocol
+  Inspiration taken from https://github.com/leaflet-extras/leaflet-providers/commit/dea786a3219f9cc824b8e96903a17f46ca9a5afc to use the &amp;lsquo;old&amp;rsquo; relative url protocols and to &amp;lsquo;upgrade&amp;rsquo; them at js runtime.
+  Notes&amp;hellip;  Copy/paste provider information into providers.json  var providers = L.TileLayer.Provider.providers; JSON.stringify(providers, null, &amp;#34; &amp;#34;);   ./data-raw/providerNames.R was re-ran to update to the latest providers
+  Some providers had their protocols turned into &amp;lsquo;//&#39;.
+ This allows browsers to pick the protocol To stop files from the protocols staying as files, a ducktape patch was applied to L.</description>
+    </item>
+    
+  </channel>
+</rss>
